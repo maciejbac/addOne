@@ -75,6 +75,9 @@
                                 <color key="textColor" red="0.41176470588235292" green="0.6588235294117647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="inputFieldDidChange" destination="BV1-FR-VrT" eventType="editingChanged" id="ehc-qi-2YZ"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add 1 to each of the digits. So, 1357 becomes 2468." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-we-zIP">
                                 <rect key="frame" x="7.6666666666666572" y="702.33333333333337" width="375" height="57.666666666666629"/>
@@ -118,6 +121,12 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="inputField" destination="aH8-2w-P1a" id="Bi7-EO-Lx9"/>
+                        <outlet property="numberLabel" destination="G5Q-gl-WUq" id="KPo-BN-YxA"/>
+                        <outlet property="scoreLabel" destination="oIn-DJ-M7e" id="dpw-tF-yNV"/>
+                        <outlet property="timeLabel" destination="QFy-HT-zRc" id="fQu-Du-hF0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
