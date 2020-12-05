@@ -40,6 +40,7 @@ class GameViewController: UIViewController {
             return
         }
         
+        
         guard inputText.count == 4 else {
             return
         }
