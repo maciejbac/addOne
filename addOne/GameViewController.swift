@@ -154,10 +154,7 @@ class GameViewController: UIViewController {
         updateNumberLabel()
         updateScoreLabel()
         inputField?.text = ""
-        
-        //self.extraTimeLabel?.alpha = 100
-        //self.extraTimeLabel?.center.y = -50
-        
+
         if timer == nil {
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 if self.seconds == 0 {
