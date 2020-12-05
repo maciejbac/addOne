@@ -16,21 +16,35 @@ class GameViewController: UIViewController {
     @IBOutlet weak var numberLabel:UILabel?
     @IBOutlet weak var inputField:UITextField?
     @IBOutlet weak var extraTimeLabel:UILabel?
+    @IBOutlet weak var highscoreLabel:UILabel?
     
     var score = 0
     var timer:Timer?
     var seconds = 10
     var extraTime = ""
-    var correctAnswerToggle = true
+    var highScore = UserDefaults.standard.integer(forKey: "HS")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        updateHighScoreLabel()
         updateScoreLabel()
         updateNumberLabel()
         updateTimeLabel()
         updateExtraTimeLabel()
+    }
+    
+    func setHighScore(currentScore: Int) {
+        highScore = UserDefaults.standard.integer(forKey: "HS")
         
+        if currentScore > highScore {
+            UserDefaults.standard.set(currentScore, forKey: "HS")
+            highScore = UserDefaults.standard.integer(forKey: "HS")
+        }
+    }
+    
+    func updateHighScoreLabel() {
+        highscoreLabel?.text = "Best: " + String(highScore)
     }
     
     func updateExtraTimeLabel(){
@@ -58,14 +72,17 @@ class GameViewController: UIViewController {
         timer?.invalidate()
         timer = nil
         
+        setHighScore(currentScore: score)
+        updateHighScoreLabel()
+        
         let alert = UIAlertController(title: "Time's Up!", message: "Your time is up! You got a score of \(score) points. Awesome!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK, start new game", style: .default, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
         
         score = 0
-        seconds = 60
-        
+        seconds = 10
+                
         updateTimeLabel()
         updateScoreLabel()
         updateNumberLabel()
@@ -101,7 +118,6 @@ class GameViewController: UIViewController {
         
         if isCorrect {
             score += 1
-            correctAnswerToggle = true
             
             self.extraTimeLabel?.text = ""
             self.extraTimeLabel?.alpha = 1
@@ -109,35 +125,28 @@ class GameViewController: UIViewController {
             
             if score < 5{
                 seconds += 5
-                extraTime = "+ 5!"
+                extraTime = "+ 5s"
                 UIView.animate(withDuration: 1) {
                     self.extraTimeLabel?.alpha = 0
                     self.extraTimeLabel?.center.y = 50
                 }
             }else if score >= 5 && score <= 9{
                 seconds += 4
-                extraTime = "+ 4!"
+                extraTime = "+ 4s"
                 UIView.animate(withDuration: 1) {
                     self.extraTimeLabel?.alpha = 0
                     self.extraTimeLabel?.center.y = 50
                 }
             }else if score >= 10 && score <= 14{
                 seconds += 3
-                extraTime = "+ 3!"
+                extraTime = "+ 3s"
                 UIView.animate(withDuration: 1) {
                     self.extraTimeLabel?.alpha = 0
                     self.extraTimeLabel?.center.y = 50
                 }
-            }else if score >= 15 && score <= 19{
-                seconds += 3
-                extraTime = "+ 3!"
-                UIView.animate(withDuration: 1) {
-                    self.extraTimeLabel?.alpha = 0
-                    self.extraTimeLabel?.center.y = 50
-                }
-            }else if score >= 20{
+            }else if score >= 15{
                 seconds += 2
-                extraTime = "+ 2!"
+                extraTime = "+ 2s"
                 UIView.animate(withDuration: 1) {
                     self.extraTimeLabel?.alpha = 0
                     self.extraTimeLabel?.center.y = 50
@@ -146,13 +155,13 @@ class GameViewController: UIViewController {
             
             
         } else {
-            correctAnswerToggle = false
             score -= 1
         }
         
+        updateScoreLabel()
         updateExtraTimeLabel()
         updateNumberLabel()
-        updateScoreLabel()
+        updateHighScoreLabel()
         inputField?.text = ""
 
         if timer == nil {
