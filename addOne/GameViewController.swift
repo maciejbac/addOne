@@ -15,10 +15,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timeLabel:UILabel?
     @IBOutlet weak var numberLabel:UILabel?
     @IBOutlet weak var inputField:UITextField?
+    @IBOutlet weak var extraTimeLabel:UILabel?
     
     var score = 0
     var timer:Timer?
-    var seconds = 30
+    var seconds = 10
+    var extraTime = ""
+    var correctAnswerToggle = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +29,12 @@ class GameViewController: UIViewController {
         updateScoreLabel()
         updateNumberLabel()
         updateTimeLabel()
+        updateExtraTimeLabel()
         
+    }
+    
+    func updateExtraTimeLabel(){
+        extraTimeLabel?.text = extraTime
     }
     
     func updateScoreLabel() {
@@ -93,13 +101,62 @@ class GameViewController: UIViewController {
         
         if isCorrect {
             score += 1
+            correctAnswerToggle = true
+            
+            self.extraTimeLabel?.text = ""
+            self.extraTimeLabel?.alpha = 1
+            self.extraTimeLabel?.center.y = 100
+            
+            if score < 5{
+                seconds += 5
+                extraTime = "+ 5!"
+                UIView.animate(withDuration: 1) {
+                    self.extraTimeLabel?.alpha = 0
+                    self.extraTimeLabel?.center.y = 50
+                }
+            }else if score >= 5 && score <= 9{
+                seconds += 4
+                extraTime = "+ 4!"
+                UIView.animate(withDuration: 1) {
+                    self.extraTimeLabel?.alpha = 0
+                    self.extraTimeLabel?.center.y = 50
+                }
+            }else if score >= 10 && score <= 14{
+                seconds += 3
+                extraTime = "+ 3!"
+                UIView.animate(withDuration: 1) {
+                    self.extraTimeLabel?.alpha = 0
+                    self.extraTimeLabel?.center.y = 50
+                }
+            }else if score >= 15 && score <= 19{
+                seconds += 3
+                extraTime = "+ 3!"
+                UIView.animate(withDuration: 1) {
+                    self.extraTimeLabel?.alpha = 0
+                    self.extraTimeLabel?.center.y = 50
+                }
+            }else if score >= 20{
+                seconds += 2
+                extraTime = "+ 2!"
+                UIView.animate(withDuration: 1) {
+                    self.extraTimeLabel?.alpha = 0
+                    self.extraTimeLabel?.center.y = 50
+                }
+            }
+            
+            
         } else {
+            correctAnswerToggle = false
             score -= 1
         }
-
+        
+        updateExtraTimeLabel()
         updateNumberLabel()
         updateScoreLabel()
         inputField?.text = ""
+        
+        //self.extraTimeLabel?.alpha = 100
+        //self.extraTimeLabel?.center.y = -50
         
         if timer == nil {
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
