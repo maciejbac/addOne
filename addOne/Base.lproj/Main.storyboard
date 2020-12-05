@@ -66,7 +66,7 @@
                                 <color key="textColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="input" translatesAutoresizingMaskIntoConstraints="NO" id="aH8-2w-P1a">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" background="input" disabledBackground="input" translatesAutoresizingMaskIntoConstraints="NO" id="aH8-2w-P1a">
                                 <rect key="frame" x="70" y="310" width="250" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="S43-cE-p02"/>

@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     
     var score = 0
     var timer:Timer?
-    var seconds = 60
+    var seconds = 30
     
     override func viewDidLoad() {
         super.viewDidLoad()
