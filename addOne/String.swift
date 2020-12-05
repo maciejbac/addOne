@@ -2,7 +2,7 @@
 //  String.swift
 //  addOne
 //
-//  Created by Maciej Baczkowski on 03/12/2020.
+//  Created by Mac on 03/12/2020.
 //
 
 import Foundation
@@ -19,5 +19,12 @@ extension String
         }
 
         return result
+    }
+    
+    func integer(at n: Int) -> Int
+    {
+        let index = self.index(self.startIndex, offsetBy: n)
+
+        return self[index].wholeNumberValue ?? 0
     }
 }

@@ -74,7 +74,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.41176470588235292" green="0.6588235294117647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="inputFieldDidChange" destination="BV1-FR-VrT" eventType="editingChanged" id="ehc-qi-2YZ"/>
                                 </connections>
