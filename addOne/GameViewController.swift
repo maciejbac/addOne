@@ -34,6 +34,13 @@ class GameViewController: UIViewController {
         updateExtraTimeLabel()
     }
     
+    func animateExtraTimeLabel() {
+        UIView.animate(withDuration: 1) {
+            self.extraTimeLabel?.alpha = 0
+            self.extraTimeLabel?.center.y = 50
+        }
+    }
+    
     func setHighScore(currentScore: Int) {
         highScore = UserDefaults.standard.integer(forKey: "HS")
         
@@ -126,31 +133,19 @@ class GameViewController: UIViewController {
             if score < 5{
                 seconds += 5
                 extraTime = "+ 5s"
-                UIView.animate(withDuration: 1) {
-                    self.extraTimeLabel?.alpha = 0
-                    self.extraTimeLabel?.center.y = 50
-                }
+                animateExtraTimeLabel()
             }else if score >= 5 && score <= 9{
                 seconds += 4
                 extraTime = "+ 4s"
-                UIView.animate(withDuration: 1) {
-                    self.extraTimeLabel?.alpha = 0
-                    self.extraTimeLabel?.center.y = 50
-                }
+                animateExtraTimeLabel()
             }else if score >= 10 && score <= 14{
                 seconds += 3
                 extraTime = "+ 3s"
-                UIView.animate(withDuration: 1) {
-                    self.extraTimeLabel?.alpha = 0
-                    self.extraTimeLabel?.center.y = 50
-                }
+                animateExtraTimeLabel()
             }else if score >= 15{
                 seconds += 2
                 extraTime = "+ 2s"
-                UIView.animate(withDuration: 1) {
-                    self.extraTimeLabel?.alpha = 0
-                    self.extraTimeLabel?.center.y = 50
-                }
+                animateExtraTimeLabel()
             }
             
             
