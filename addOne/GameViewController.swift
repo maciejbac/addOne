@@ -20,7 +20,7 @@ class GameViewController: UIViewController {
     
     var score = 0
     var timer:Timer?
-    var seconds = 10
+    var seconds = 15
     var extraTime = ""
     var highScore = UserDefaults.standard.integer(forKey: "HS")
     
