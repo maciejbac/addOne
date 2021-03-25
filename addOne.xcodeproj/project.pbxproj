@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9B046F7425795B0D00A0D6A8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B046F7325795B0D00A0D6A8 /* String.swift */; };
-		9B269F76260CC0CE00845198 /* mainMenuScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B269F75260CC0CE00845198 /* mainMenuScene.storyboard */; };
 		9B57D6D725744FB2003A7462 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9B57D6D625744FB2003A7462 /* README.md */; };
 		9B57D6E1257451D0003A7462 /* HVD_Comic_Serif_Pro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B57D6E0257451D0003A7462 /* HVD_Comic_Serif_Pro.otf */; };
 		9B8D2524257ED04500858334 /* splashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8D2523257ED04500858334 /* splashScreen.storyboard */; };
@@ -42,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		9B046F7325795B0D00A0D6A8 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		9B269F75260CC0CE00845198 /* mainMenuScene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mainMenuScene.storyboard; sourceTree = "<group>"; };
 		9B57D6D625744FB2003A7462 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9B57D6E0257451D0003A7462 /* HVD_Comic_Serif_Pro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HVD_Comic_Serif_Pro.otf; sourceTree = SOURCE_ROOT; };
 		9B8D2523257ED04500858334 /* splashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splashScreen.storyboard; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				9BCCE2FA25743847006DC83F /* GameScene.swift */,
 				9BCCE2FC25743847006DC83F /* GameViewController.swift */,
 				9BCCE2FE25743847006DC83F /* Main.storyboard */,
-				9B269F75260CC0CE00845198 /* mainMenuScene.storyboard */,
 				9B8D2523257ED04500858334 /* splashScreen.storyboard */,
 				9BCCE30125743849006DC83F /* Assets.xcassets */,
 				9BCCE30325743849006DC83F /* Info.plist */,
@@ -256,7 +253,6 @@
 				9BCCE2F725743847006DC83F /* GameScene.sks in Resources */,
 				9BCCE30225743849006DC83F /* Assets.xcassets in Resources */,
 				9BCCE2F925743847006DC83F /* Actions.sks in Resources */,
-				9B269F76260CC0CE00845198 /* mainMenuScene.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
