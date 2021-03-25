@@ -32,7 +32,21 @@ class GameViewController: UIViewController {
         updateNumberLabel()
         updateTimeLabel()
         updateExtraTimeLabel()
+        
+        let attrString = NSAttributedString(
+            string: " ",
+            attributes: [
+                NSAttributedString.Key.strokeColor: UIColor.black,
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.strokeWidth: -2.0,
+                //NSAttributedString.Key.font: UIFont(name: "HVD Comic Serif pro", size: 22)
+            ]
+        )
+        scoreLabel?.attributedText = attrString
+        timeLabel?.attributedText = attrString
     }
+    
+    
     
     func animateExtraTimeLabel() {
         UIView.animate(withDuration: 1) {
