@@ -9,6 +9,28 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+class ViewController: UIViewController {
+    @IBOutlet weak var playButton:UIButton?
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        let attrString = NSAttributedString(
+            string: "Play!",
+            attributes: [
+                NSAttributedString.Key.strokeColor: UIColor.black,
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.strokeWidth: -2.0,
+            ]
+        )
+        
+        playButton?.titleLabel?.attributedText = attrString
+
+    }
+    
+}
+
 class GameViewController: UIViewController {
 
     @IBOutlet weak var scoreLabel:UILabel?
@@ -17,6 +39,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var inputField:UITextField?
     @IBOutlet weak var extraTimeLabel:UILabel?
     @IBOutlet weak var highscoreLabel:UILabel?
+    @IBOutlet weak var infoText:UILabel?
+    
     
     var score = 0
     var timer:Timer?
@@ -34,16 +58,18 @@ class GameViewController: UIViewController {
         updateExtraTimeLabel()
         
         let attrString = NSAttributedString(
-            string: " ",
+            string: "Score",
             attributes: [
                 NSAttributedString.Key.strokeColor: UIColor.black,
-                NSAttributedString.Key.foregroundColor: UIColor.white,
                 NSAttributedString.Key.strokeWidth: -2.0,
-                //NSAttributedString.Key.font: UIFont(name: "HVD Comic Serif pro", size: 22)
             ]
         )
         scoreLabel?.attributedText = attrString
+        scoreLabel?.text = "Score"
         timeLabel?.attributedText = attrString
+        timeLabel?.text = "Time"
+        infoText?.attributedText = attrString
+        
     }
     
     
@@ -135,7 +161,6 @@ class GameViewController: UIViewController {
                 break
             }
         }
-        
         
         if isCorrect {
             score += 1

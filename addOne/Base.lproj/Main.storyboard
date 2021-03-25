@@ -79,13 +79,20 @@
                                     <action selector="inputFieldDidChange" destination="BV1-FR-VrT" eventType="editingChanged" id="ehc-qi-2YZ"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add 1 to each of the digits. So, 1357 becomes 2468." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-we-zIP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-we-zIP">
                                 <rect key="frame" x="7.6666666666666572" y="702.33333333333337" width="375" height="57.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="WJL-XD-DL3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Add 1 to each of the digits. So, 1357 becomes 2468.">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="24" name="HVDComicSerifPro"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnc-3c-Dlq">
@@ -138,6 +145,7 @@
                     <connections>
                         <outlet property="extraTimeLabel" destination="Jnc-3c-Dlq" id="42M-AT-EIv"/>
                         <outlet property="highscoreLabel" destination="hCm-CZ-pj4" id="m5L-tH-wes"/>
+                        <outlet property="infoText" destination="Rih-we-zIP" id="Xve-GX-zfd"/>
                         <outlet property="inputField" destination="aH8-2w-P1a" id="Bi7-EO-Lx9"/>
                         <outlet property="numberLabel" destination="G5Q-gl-WUq" id="KPo-BN-YxA"/>
                         <outlet property="scoreLabel" destination="oIn-DJ-M7e" id="dpw-tF-yNV"/>
@@ -151,7 +159,7 @@
         <!--View Controller-->
         <scene sceneID="sN9-I3-jqt">
             <objects>
-                <viewController id="Srn-Vu-d2t" sceneMemberID="viewController">
+                <viewController id="Srn-Vu-d2t" customClass="ViewController" customModule="addOne" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kpv-mj-S2k"/>
                         <viewControllerLayoutGuide type="bottom" id="cQS-ff-OAu"/>
@@ -167,6 +175,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dro-ZP-8Vl">
                                 <rect key="frame" x="102" y="376" width="197" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="playButton"/>
                                 <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="75"/>
                                 <state key="normal" title="Play!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -182,6 +191,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="Dro-ZP-8Vl" id="66N-8n-SoD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joV-E6-3kP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
