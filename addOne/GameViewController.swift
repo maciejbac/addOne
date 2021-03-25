@@ -69,6 +69,7 @@ class GameViewController: UIViewController {
         timeLabel?.attributedText = attrString
         timeLabel?.text = "Time"
         infoText?.attributedText = attrString
+        infoText?.text = "Add 1 to each of the digits. So, 1357 becomes 2468."
         
     }
     
