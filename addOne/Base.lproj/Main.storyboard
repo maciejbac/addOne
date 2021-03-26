@@ -109,6 +109,17 @@
                                 <color key="textColor" red="0.7019608021" green="0.46274507050000002" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aw-Ou-9fd">
+                                <rect key="frame" x="25" y="25" width="61" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <state key="normal" title="menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Srn-Vu-d2t" kind="presentation" id="Zqy-vA-JcA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -147,6 +158,7 @@
                         <outlet property="highscoreLabel" destination="hCm-CZ-pj4" id="m5L-tH-wes"/>
                         <outlet property="infoText" destination="Rih-we-zIP" id="Xve-GX-zfd"/>
                         <outlet property="inputField" destination="aH8-2w-P1a" id="Bi7-EO-Lx9"/>
+                        <outlet property="menuButton" destination="5aw-Ou-9fd" id="Iep-Db-eo2"/>
                         <outlet property="numberLabel" destination="G5Q-gl-WUq" id="KPo-BN-YxA"/>
                         <outlet property="scoreLabel" destination="oIn-DJ-M7e" id="dpw-tF-yNV"/>
                         <outlet property="timeLabel" destination="QFy-HT-zRc" id="fQu-Du-hF0"/>
@@ -159,7 +171,7 @@
         <!--View Controller-->
         <scene sceneID="sN9-I3-jqt">
             <objects>
-                <viewController id="Srn-Vu-d2t" customClass="ViewController" customModule="addOne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Srn-Vu-d2t" customClass="ViewController" customModule="addOne" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kpv-mj-S2k"/>
                         <viewControllerLayoutGuide type="bottom" id="cQS-ff-OAu"/>
@@ -170,6 +182,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="tAp-f0-U7P">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="xMA-I4-5ny">
+                                <rect key="frame" x="-58" y="-112" width="527" height="1595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dro-ZP-8Vl">
@@ -184,14 +200,23 @@
                                     <segue destination="BV1-FR-VrT" kind="presentation" modalTransitionStyle="crossDissolve" id="z58-bz-KZ2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="xMA-I4-5ny">
-                                <rect key="frame" x="-58" y="-112" width="527" height="1595"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pda-qr-u30">
+                                <rect key="frame" x="130" y="598" width="130" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="35"/>
+                                <state key="normal" title="Credits">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mBz-Y2-4Th" kind="presentation" modalTransitionStyle="crossDissolve" id="Evt-jQ-qhn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Pat-B1-kty"/>
                     <connections>
+                        <outlet property="creditsButton" destination="pda-qr-u30" id="S5A-Q9-hIM"/>
                         <outlet property="playButton" destination="Dro-ZP-8Vl" id="66N-8n-SoD"/>
                     </connections>
                 </viewController>
@@ -199,7 +224,60 @@
             </objects>
             <point key="canvasLocation" x="-1175.3846153846152" y="52.606635071090047"/>
         </scene>
+        <!--Credits Controller-->
+        <scene sceneID="WYr-RK-5l1">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="mBz-Y2-4Th" customClass="creditsController" customModule="addOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KO7-Y8-582"/>
+                        <viewControllerLayoutGuide type="bottom" id="joW-y7-ITU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="92P-aU-fvE">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="0fj-8x-KeL">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="cdu-sN-zvK">
+                                <rect key="frame" x="-69" y="-376" width="527" height="1595"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN1-b3-TVY">
+                                <rect key="frame" x="135" y="412" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6l-Ko-Q5f">
+                                <rect key="frame" x="25" y="25" width="61" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <state key="normal" title="menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Srn-Vu-d2t" kind="presentation" id="m3y-B6-Mcb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xin-Tn-R3o"/>
+                    <connections>
+                        <outlet property="menuButton" destination="D6l-Ko-Q5f" id="LKs-d4-dn3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xM-pO-Del" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175" y="744"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="m3y-B6-Mcb"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Background-1" width="375" height="667"/>
         <image name="Clouds" width="375" height="1462"/>

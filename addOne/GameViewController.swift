@@ -9,8 +9,31 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+class creditsController: UIViewController{
+    @IBOutlet weak var menuButton:UIButton?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        let attrString = NSAttributedString(
+            string: "Play!",
+            attributes: [
+                NSAttributedString.Key.strokeColor: UIColor.black,
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.strokeWidth: -2.0,
+            ]
+        )
+    
+        menuButton?.titleLabel?.attributedText = attrString
+        menuButton?.titleLabel?.text = "menu"
+        
+    }
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var playButton:UIButton?
+    @IBOutlet weak var creditsButton:UIButton?
+    
 
     
     override func viewDidLoad() {
@@ -26,6 +49,7 @@ class ViewController: UIViewController {
         )
         
         playButton?.titleLabel?.attributedText = attrString
+        creditsButton?.titleLabel?.attributedText = attrString
 
     }
     
@@ -40,6 +64,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var extraTimeLabel:UILabel?
     @IBOutlet weak var highscoreLabel:UILabel?
     @IBOutlet weak var infoText:UILabel?
+    @IBOutlet weak var menuButton:UIButton?
     
     
     var score = 0
@@ -70,6 +95,8 @@ class GameViewController: UIViewController {
         timeLabel?.text = "Time"
         infoText?.attributedText = attrString
         infoText?.text = "Add 1 to each of the digits. So, 1357 becomes 2468."
+        menuButton?.titleLabel?.attributedText = attrString
+        menuButton?.titleLabel?.text = "menu"
         
     }
     
