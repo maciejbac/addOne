@@ -30,7 +30,7 @@ class creditsController: UIViewController{
     }
 }
 
-class ViewController: UIViewController {
+class mainMenuController: UIViewController {
     @IBOutlet weak var playButton:UIButton?
     @IBOutlet weak var creditsButton:UIButton?
     
@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         
         playButton?.titleLabel?.attributedText = attrString
         creditsButton?.titleLabel?.attributedText = attrString
+        
 
     }
     
