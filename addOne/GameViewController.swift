@@ -11,6 +11,7 @@ import GameplayKit
 
 class creditsController: UIViewController{
     @IBOutlet weak var menuButton:UIButton?
+    @IBOutlet weak var textLabel:UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class creditsController: UIViewController{
     
         menuButton?.titleLabel?.attributedText = attrString
         menuButton?.titleLabel?.text = "menu"
+        textLabel?.attributedText = attrString
+        textLabel?.text = "placeholde"
         
     }
 }

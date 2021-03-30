@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Srn-Vu-d2t">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,14 +21,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Y4b-m7-Bgn"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="0NB-6g-siD">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="TOr-NU-siq">
-                                <rect key="frame" x="150" y="120" width="300" height="130"/>
+                                <rect key="frame" x="45" y="164" width="300" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="5Vo-SC-Olw"/>
                                     <constraint firstAttribute="width" constant="300" id="zJe-nV-fjT"/>
@@ -47,26 +48,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timer" translatesAutoresizingMaskIntoConstraints="NO" id="fpe-Tq-4nW">
-                                <rect key="frame" x="450" y="6" width="150" height="50"/>
+                                <rect key="frame" x="240" y="50" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="SLu-no-Z2c"/>
                                     <constraint firstAttribute="height" constant="50" id="fLW-8s-pWY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-HT-zRc">
-                                <rect key="frame" x="477.5" y="18" width="55.5" height="26"/>
+                                <rect key="frame" x="265.33333333333331" y="62" width="59.333333333333314" height="26"/>
                                 <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5Q-gl-WUq">
-                                <rect key="frame" x="222" y="144" width="156" height="82"/>
+                                <rect key="frame" x="121.00000000000001" y="187" width="148.33333333333337" height="84"/>
                                 <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
                                 <color key="textColor" red="0.66666668650000005" green="0.47450977560000002" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" background="input" disabledBackground="input" translatesAutoresizingMaskIntoConstraints="NO" id="aH8-2w-P1a">
-                                <rect key="frame" x="175" y="270" width="250" height="110"/>
+                                <rect key="frame" x="70" y="314" width="250" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="S43-cE-p02"/>
                                     <constraint firstAttribute="height" constant="110" id="UO8-WO-6bM"/>
@@ -79,7 +80,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-we-zIP">
-                                <rect key="frame" x="112.5" y="494" width="375" height="56"/>
+                                <rect key="frame" x="7.6666666666666572" y="702.33333333333337" width="375" height="57.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="WJL-XD-DL3"/>
                                 </constraints>
@@ -176,7 +177,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cQS-ff-OAu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="r9G-Mv-CrD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="tAp-f0-U7P">
@@ -232,7 +233,7 @@
                         <viewControllerLayoutGuide type="bottom" id="joW-y7-ITU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="92P-aU-fvE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="0fj-8x-KeL">
@@ -243,8 +244,8 @@
                                 <rect key="frame" x="-69" y="-376" width="527" height="1595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN1-b3-TVY">
-                                <rect key="frame" x="135" y="412" width="90" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="textLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN1-b3-TVY">
+                                <rect key="frame" x="135" y="412" width="71" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -267,6 +268,7 @@
                     <navigationItem key="navigationItem" id="xin-Tn-R3o"/>
                     <connections>
                         <outlet property="menuButton" destination="D6l-Ko-Q5f" id="LKs-d4-dn3"/>
+                        <outlet property="textLabel" destination="TN1-b3-TVY" id="KeR-ht-aA0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xM-pO-Del" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
