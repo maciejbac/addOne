@@ -200,8 +200,16 @@
                                     <segue destination="BV1-FR-VrT" kind="presentation" modalTransitionStyle="crossDissolve" id="z58-bz-KZ2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4s-7N-dkT">
+                                <rect key="frame" x="126" y="536" width="149" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="35"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pda-qr-u30">
-                                <rect key="frame" x="130" y="598" width="130" height="54"/>
+                                <rect key="frame" x="135" y="598" width="130" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="35"/>
                                 <state key="normal" title="Credits">
@@ -218,6 +226,7 @@
                     <connections>
                         <outlet property="creditsButton" destination="pda-qr-u30" id="S5A-Q9-hIM"/>
                         <outlet property="playButton" destination="Dro-ZP-8Vl" id="66N-8n-SoD"/>
+                        <outlet property="settingsButton" destination="V4s-7N-dkT" id="pmX-bZ-Dvx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joV-E6-3kP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
