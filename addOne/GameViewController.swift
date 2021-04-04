@@ -28,7 +28,7 @@ class creditsController: UIViewController{
         menuButton?.titleLabel?.attributedText = attrString
         menuButton?.titleLabel?.text = "menu"
         textLabel?.attributedText = attrString
-        textLabel?.text = "placeholder"
+        textLabel?.text = "Placeholder"
         
     }
 }
