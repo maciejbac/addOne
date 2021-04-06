@@ -33,6 +33,30 @@ class creditsController: UIViewController{
     }
 }
 
+class settingsController: UIViewController{
+    @IBOutlet weak var menuButton:UIButton?
+    @IBOutlet weak var textLabel:UILabel?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        let attrString = NSAttributedString(
+            string: "Play!",
+            attributes: [
+                NSAttributedString.Key.strokeColor: UIColor.black,
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.strokeWidth: -2.0,
+            ]
+        )
+    
+        menuButton?.titleLabel?.attributedText = attrString
+        menuButton?.titleLabel?.text = "menu"
+        textLabel?.attributedText = attrString
+        textLabel?.text = "Placeholder"
+        
+    }
+}
+
 class mainMenuController: UIViewController {
     @IBOutlet weak var playButton:UIButton?
     @IBOutlet weak var creditsButton:UIButton?
