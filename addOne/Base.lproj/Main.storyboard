@@ -284,57 +284,9 @@
             </objects>
             <point key="canvasLocation" x="-1175.3846153846152" y="743.60189573459718"/>
         </scene>
-        <!--Settings Controller-->
-        <scene sceneID="9il-4U-HVN">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="O6t-yU-LEY" customClass="settingsController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3w5-Ix-Io1"/>
-                        <viewControllerLayoutGuide type="bottom" id="rpV-bq-863"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Eth-M8-3wM">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-P6-VaP">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="6JX-X1-cc4">
-                                <rect key="frame" x="-69" y="-376" width="527" height="1595"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="textLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-eN-vkp">
-                                <rect key="frame" x="135" y="412" width="109" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fih-ek-w2V">
-                                <rect key="frame" x="25" y="25" width="61" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
-                                <state key="normal" title="menu">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="mKH-Gg-z37"/>
-                    <connections>
-                        <outlet property="menuButton" destination="Fih-ek-w2V" id="emy-ZM-nBN"/>
-                        <outlet property="textLabel" destination="s33-eN-vkp" id="NEq-bO-Y44"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9dH-4y-gpV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1175.3846153846152" y="743.60189573459718"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zqy-vA-JcA"/>
+        <segue reference="m3y-B6-Mcb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background-1" width="375" height="667"/>
